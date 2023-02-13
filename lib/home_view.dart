@@ -11,15 +11,16 @@ class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    print("ehllo");
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: const Color(0xffFEE5CA),
       body: ListView(
         children: [
           Image.network(
+            backgroundImageUrl,
             height: screenSize.height,
             width: screenSize.width,
-            backgroundImageUrl,
             fit: BoxFit.cover,
           ),
           const OverlayTextSection(),
