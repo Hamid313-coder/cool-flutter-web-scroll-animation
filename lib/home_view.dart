@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 part 'home_view.widgets.dart';
 
@@ -15,16 +16,28 @@ class HomeView extends StatelessWidget {
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: const Color(0xffFEE5CA),
-      body: ListView(
+      body: ScrollTransformView(
         children: [
-          Image.network(
-            backgroundImageUrl,
-            height: screenSize.height,
-            width: screenSize.width,
-            fit: BoxFit.cover,
+          ScrollTransformItem(
+            builder: (offSet) {
+              return Image.network(
+                backgroundImageUrl,
+                height: screenSize.height,
+                width: screenSize.width,
+                fit: BoxFit.cover,
+              );
+            },
+            offsetBuilder: (scrollOffset) {
+              return Offset(0, scrollOffset);
+            },
           ),
-          const OverlayTextSection(),
-          const BottomSection(),
+          ScrollTransformItem(
+            builder: (offSet) {
+              return const OverlayTextSection();
+            },
+            offsetBuilder: (offset) => Offset(0, -screenSize.height),
+          ),
+          ScrollTransformItem(builder: (offSet) => const BottomSection()),
         ],
       ),
     );
