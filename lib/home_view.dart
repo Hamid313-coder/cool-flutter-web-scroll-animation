@@ -11,7 +11,7 @@ class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    print("ehllo");
+    print("ehlloooo");
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: const Color(0xffFEE5CA),
