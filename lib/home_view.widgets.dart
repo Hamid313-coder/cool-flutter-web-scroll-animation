@@ -18,7 +18,7 @@ class BottomSection extends StatelessWidget {
             top: -50,
             child: Center(
               child: Text(
-                'I AM FILLEDSTACKS.\nA CREATOR OF THINGS.\nSOMETIMES I GO EXPLORE\nAND MAKE THINGS\nTHAT I FIND INTERESTING',
+                'I AM Hamidev.\nA CREATOR OF THINGS.\nSOMETIMES I GO EXPLORE\nAND MAKE THINGS\nTHAT I FIND INTERESTING',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.biryani(
                   color: Colors.white,

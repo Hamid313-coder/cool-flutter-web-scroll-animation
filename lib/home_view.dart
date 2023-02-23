@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -19,16 +21,24 @@ class HomeView extends StatelessWidget {
       body: ScrollTransformView(
         children: [
           ScrollTransformItem(
-            builder: (offSet) {
+            builder: (offset) {
+              final screenOffPercentage = min(offset / screenSize.height, 1);
+
               return Image.network(
                 backgroundImageUrl,
-                height: screenSize.height,
-                width: screenSize.width,
+                height: screenSize.height -
+                    (screenSize.height * 0.2 * screenOffPercentage),
+                width: screenSize.width -
+                    (screenSize.width * 0.5 * screenOffPercentage),
                 fit: BoxFit.cover,
               );
             },
-            offsetBuilder: (scrollOffset) {
-              return Offset(0, scrollOffset);
+            offsetBuilder: (offset) {
+              final screenOffPercentage = min(offset / screenSize.height, 1);
+              final heightShrinkageAmount =
+                  screenSize.height * 0.2 * screenOffPercentage;
+              final double onScreenOffset = offset + heightShrinkageAmount / 2;
+              return Offset(0, onScreenOffset);
             },
           ),
           ScrollTransformItem(
