@@ -38,7 +38,13 @@ class HomeView extends StatelessWidget {
               final heightShrinkageAmount =
                   screenSize.height * 0.2 * screenOffPercentage;
               final double onScreenOffset = offset + heightShrinkageAmount / 2;
-              return Offset(0, onScreenOffset);
+              final isStartMoving = offset >= screenSize.height;
+
+              return Offset(
+                  0,
+                  isStartMoving
+                      ? onScreenOffset - (offset - screenSize.height)
+                      : onScreenOffset);
             },
           ),
           ScrollTransformItem(
