@@ -18,7 +18,7 @@ class BottomSection extends StatelessWidget {
             top: -50,
             child: Center(
               child: Text(
-                'I AM Hamidev.\nA CREATOR OF THINGS.\nSOMETIMES I GO EXPLORE\nAND MAKE THINGS\nTHAT I FIND INTERESTING',
+                'I AM HAMID HUSSAINY.\nA CREATOR OF THINGS.\nSOMETIMES I GO EXPLORE\nAND MAKE THINGS\nTHAT I FIND INTERESTING',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.biryani(
                   color: Colors.white,
@@ -54,12 +54,12 @@ class OverlayTextSection extends StatelessWidget {
             left: 50,
           ),
           _TitleText(
-            text: 'THE',
+            text: 'THIS',
             top: 260,
             left: 290,
           ),
           _TitleText(
-            text: 'VIDEO',
+            text: 'POST',
             top: 420,
             left: 220,
           ),
@@ -70,7 +70,7 @@ class OverlayTextSection extends StatelessWidget {
               width: 470,
               child: Text(
                 overlayDescriptionText,
-                style: TextStyle(color: Colors.white, fontSize: 20),
+                style: TextStyle(color: Colors.white, fontSize: 24),
               ),
             ),
           ),

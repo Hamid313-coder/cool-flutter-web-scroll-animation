@@ -8,7 +8,8 @@ part 'home_view.widgets.dart';
 
 const overlayDescriptionText =
     'I have to write some stuff to put in here so that it looks like there\'s something real written here. So lets write some real stuff here. A few weeks ago I concluded the biggest failure of my career. I founded a new startup and poured all my money and energy into it and it failed. The reasons for failure are clear and if you\'d like to hear I can make a video about that. For now that\'s all that I\'ll say.';
-const backgroundImageUrl = 'https://source.unsplash.com/XO5qTnr0a50';
+const backgroundImageUrl =
+    'https://images.unsplash.com/photo-1677142709742-fdaa4b7a495e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
